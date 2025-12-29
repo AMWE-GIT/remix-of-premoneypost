@@ -6,6 +6,10 @@ const Hero = () => {
     document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
   };
   
+  const scrollToCommunity = () => {
+    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <section className="flex items-center justify-center relative">
       <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20"></div>
@@ -13,22 +17,28 @@ const Hero = () => {
         <img 
           src="/lovable-uploads/1e6ceb65-666a-4a1e-9283-286a21d449e1.png" 
           alt="PMP Logo" 
-          className="mb-8 w-40 h-40" // Increased size by ~30% from w-32 h-32 to w-40 h-40
+          className="mb-8 w-40 h-40"
         />
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 max-w-4xl animate-fade-in">
-          Crafting Exceptional
-          <span className="block">Brands & Experiences</span>
+          We build and partner on new ventures.
         </h1>
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          We build and nurture innovative brands that connect with people and drive business forward.
+          PreMoneyPost® is an operator-led venture group exploring ideas across industries and collaborating with builders at the earliest stages.
         </p>
-        <Button 
-          onClick={scrollToContact} 
-          className="bg-[#65B741] hover:bg-[#4E9F3D] text-white text-lg px-8 py-6 animate-fade-in"
-          style={{ animationDelay: '0.4s' }}
-        >
-          Contact
-        </Button>
+        <div className="flex flex-col sm:flex-row items-center gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+          <Button 
+            onClick={scrollToContact} 
+            className="bg-[#65B741] hover:bg-[#4E9F3D] text-white text-lg px-8 py-6"
+          >
+            Start a Conversation
+          </Button>
+          <button 
+            onClick={scrollToCommunity}
+            className="text-gray-300 hover:text-white underline underline-offset-4 transition-colors"
+          >
+            Learn about the community
+          </button>
+        </div>
       </div>
     </section>
   );
