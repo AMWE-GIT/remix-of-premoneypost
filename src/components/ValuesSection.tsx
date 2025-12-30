@@ -38,24 +38,20 @@ const ValuesSection = () => {
 
   const values = [
     { 
-      title: "Innovation", 
-      description: "We constantly push boundaries and explore new possibilities in everything we do. Innovation is not just encouraged—it's essential to our identity." 
+      title: "Build", 
+      description: "We build our own companies. From early ideas to launched products, we create ventures we intend to own and grow." 
     },
     { 
-      title: "Excellence", 
-      description: "We hold ourselves to the highest standards in every aspect of our work. Mediocrity is never an option." 
+      title: "Explore", 
+      description: "We explore ideas across industries. We spend time understanding problems, markets, and opportunities before committing to what to build or back." 
     },
     { 
-      title: "Integrity", 
-      description: "We believe in transparency, honesty, and ethical business practices. Our word is our bond." 
+      title: "Collaborate", 
+      description: "We collaborate early with founders. When there's overlap in thinking and ambition, we get involved early to shape direction and execution." 
     },
     { 
-      title: "Human Connection", 
-      description: "At the heart of our brands is a deep understanding of human needs, desires, and emotions. We create to connect." 
-    },
-    { 
-      title: "Sustainability", 
-      description: "We're committed to responsible business practices that respect our planet and contribute positively to our communities." 
+      title: "Invest", 
+      description: "We invest selectively. In some cases, we commit capital or resources to ideas and companies with clear potential." 
     }
   ];
 
@@ -63,7 +59,7 @@ const ValuesSection = () => {
     <section id="values" className="py-4 bg-black">
       <div className="container mx-auto">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 pl-4">Values</h2>
+          
         </div>
         
         <div>
