@@ -1,52 +1,61 @@
 import { useState } from 'react';
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { CountryCodeSelector } from './CountryCodeSelector';
 
-const ContactSection = () => {
+interface CommunityModalProps {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+}
+
+const CommunityModal = ({ open, onOpenChange }: CommunityModalProps) => {
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
-    company: '',
     email: '',
     phone: '',
     countryCode: '+1-US',
+    company: '',
     message: ''
   });
-  
+
   const [errors, setErrors] = useState<{
     name?: string;
-    company?: string;
     email?: string;
     phone?: string;
+    company?: string;
   }>({});
-  
+
   const [touched, setTouched] = useState({
     name: false,
-    company: false,
     email: false,
     phone: false,
+    company: false,
     message: false
   });
-  
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     
-    // Clear error when user types
     if (errors[name as keyof typeof errors]) {
       setErrors(prev => ({ ...prev, [name]: undefined }));
     }
   };
-  
+
   const handleBlur = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name } = e.target;
     setTouched(prev => ({ ...prev, [name]: true }));
     validateField(name, formData[name as keyof typeof formData]);
   };
-  
+
   const validateField = (name: string, value: string) => {
-    // Don't validate message field
     if (name === 'message') return true;
     
     if (!value.trim()) {
@@ -65,23 +74,17 @@ const ContactSection = () => {
     setErrors(prev => ({ ...prev, [name]: undefined }));
     return true;
   };
-  
+
   const handleCountryCodeChange = (value: string) => {
     setFormData(prev => ({ ...prev, countryCode: value }));
   };
-  
+
   const validateForm = () => {
     const newErrors: {[key: string]: string} = {};
     let isValid = true;
     
-    // Check required fields - excluding message
     if (!formData.name.trim()) {
       newErrors.name = 'Field is required';
-      isValid = false;
-    }
-
-    if (!formData.company.trim()) {
-      newErrors.company = 'Field is required';
       isValid = false;
     }
     
@@ -100,20 +103,24 @@ const ContactSection = () => {
       newErrors.phone = 'Field is required';
       isValid = false;
     }
+
+    if (!formData.company.trim()) {
+      newErrors.company = 'Field is required';
+      isValid = false;
+    }
     
     setErrors(newErrors);
-    // Set all fields as touched
     setTouched({
       name: true,
-      company: true,
       email: true,
       phone: true,
+      company: true,
       message: true
     });
     
     return isValid;
   };
-  
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
@@ -121,60 +128,70 @@ const ContactSection = () => {
       return;
     }
     
-    // Get the actual code for submission
     const actualCode = formData.countryCode.split('-')[0] || formData.countryCode;
     
-    // Format phone with country code for submission
     const formattedData = {
       ...formData,
       phone: formData.phone ? `${actualCode} ${formData.phone}` : ''
     };
     
-    // In a real app, you would send this data to your backend
-    console.log("Form submitted:", formattedData);
-    
-    // Set form as submitted
+    console.log("Community invite request submitted:", formattedData);
     setFormSubmitted(true);
   };
 
-  // Render thank you message when form is submitted
-  if (formSubmitted) {
-    return (
-      <section id="contact" className="py-20">
-        <div className="container mx-auto px-4 flex justify-center">
-          <div className="max-w-lg w-full">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">Contact</h2>
-            
-            <div className="text-center">
-              <p className="text-xl">
-                <span className="text-[#9b87f5] font-medium">Thank you</span> for filling out the form.
-                <br />
-                We'll get back to you within 48 hours.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-    );
-  }
+  const handleClose = () => {
+    onOpenChange(false);
+    // Reset form after closing
+    setTimeout(() => {
+      setFormSubmitted(false);
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        countryCode: '+1-US',
+        company: '',
+        message: ''
+      });
+      setErrors({});
+      setTouched({
+        name: false,
+        email: false,
+        phone: false,
+        company: false,
+        message: false
+      });
+    }, 300);
+  };
 
   return (
-    <section id="contact" className="py-20">
-      <div className="container mx-auto px-4 flex justify-center">
-        <div className="max-w-lg w-full">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">Contact</h2>
-          
-          <form onSubmit={handleSubmit} className="space-y-6">
+    <Dialog open={open} onOpenChange={handleClose}>
+      <DialogContent className="bg-black border border-white/20 text-white max-w-md">
+        <DialogHeader>
+          <DialogTitle className="text-2xl font-bold text-center">
+            {formSubmitted ? "Thank You" : "Request an Invite"}
+          </DialogTitle>
+        </DialogHeader>
+
+        {formSubmitted ? (
+          <div className="text-center py-6">
+            <p className="text-gray-300">
+              We've received your request.
+              <br />
+              We'll be in touch soon.
+            </p>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit} className="space-y-4 mt-4">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+              <label htmlFor="modal-name" className="block text-sm font-medium mb-2">Name</label>
               <Input
                 type="text"
-                id="name"
+                id="modal-name"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                className={`w-full px-4 py-3 bg-secondary text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-white ${
+                className={`w-full px-4 py-3 bg-white/10 text-white border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#65B741] ${
                   touched.name && errors.name ? 'border-red-500 ring-1 ring-red-500' : ''
                 }`}
                 placeholder="Your name"
@@ -185,34 +202,15 @@ const ContactSection = () => {
             </div>
 
             <div>
-              <label htmlFor="company" className="block text-sm font-medium mb-2">Company</label>
-              <Input
-                type="text"
-                id="company"
-                name="company"
-                value={formData.company}
-                onChange={handleChange}
-                onBlur={handleBlur}
-                className={`w-full px-4 py-3 bg-secondary text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-white ${
-                  touched.company && errors.company ? 'border-red-500 ring-1 ring-red-500' : ''
-                }`}
-                placeholder="Your company"
-              />
-              {touched.company && errors.company && (
-                <p className="text-red-500 text-sm mt-1">{errors.company}</p>
-              )}
-            </div>
-            
-            <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+              <label htmlFor="modal-email" className="block text-sm font-medium mb-2">Email</label>
               <Input
                 type="email"
-                id="email"
+                id="modal-email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                className={`w-full px-4 py-3 bg-secondary text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-white ${
+                className={`w-full px-4 py-3 bg-white/10 text-white border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#65B741] ${
                   touched.email && errors.email ? 'border-red-500 ring-1 ring-red-500' : ''
                 }`}
                 placeholder="your.email@example.com"
@@ -221,27 +219,27 @@ const ContactSection = () => {
                 <p className="text-red-500 text-sm mt-1">{errors.email}</p>
               )}
             </div>
-            
+
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium mb-2">Phone</label>
-              <div className={`relative flex bg-secondary text-black rounded-lg ${
+              <label htmlFor="modal-phone" className="block text-sm font-medium mb-2">Phone</label>
+              <div className={`relative flex bg-white/10 text-white border border-white/20 rounded-lg ${
                 touched.phone && errors.phone ? 'border-red-500 ring-1 ring-red-500' : ''
               }`}>
                 <div className="flex-shrink-0 pl-3 flex items-center">
                   <CountryCodeSelector 
                     value={formData.countryCode} 
                     onValueChange={handleCountryCodeChange}
-                    className="bg-transparent text-black w-auto px-0 py-0 focus:ring-0"
+                    className="bg-transparent text-white w-auto px-0 py-0 focus:ring-0"
                   />
                 </div>
                 <Input
                   type="tel"
-                  id="phone"
+                  id="modal-phone"
                   name="phone"
                   value={formData.phone}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  className="flex-grow border-0 bg-transparent rounded-l-none focus:ring-0 focus:outline-none"
+                  className="flex-grow border-0 bg-transparent text-white rounded-l-none focus:ring-0 focus:outline-none"
                   placeholder="Phone number"
                 />
               </div>
@@ -249,32 +247,53 @@ const ContactSection = () => {
                 <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
               )}
             </div>
-            
+
             <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+              <label htmlFor="modal-company" className="block text-sm font-medium mb-2">Company</label>
+              <Input
+                type="text"
+                id="modal-company"
+                name="company"
+                value={formData.company}
+                onChange={handleChange}
+                onBlur={handleBlur}
+                className={`w-full px-4 py-3 bg-white/10 text-white border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#65B741] ${
+                  touched.company && errors.company ? 'border-red-500 ring-1 ring-red-500' : ''
+                }`}
+                placeholder="Your company"
+              />
+              {touched.company && errors.company && (
+                <p className="text-red-500 text-sm mt-1">{errors.company}</p>
+              )}
+            </div>
+
+            <div>
+              <label htmlFor="modal-message" className="block text-sm font-medium mb-2">Message</label>
               <textarea
-                id="message"
+                id="modal-message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                rows={5}
-                className="w-full px-4 py-3 bg-secondary text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-white text-sm font-sans"
-                placeholder="Tell us about your project or inquiry..."
-              ></textarea>
-              {/* No error message for the message field */}
+                rows={3}
+                className="w-full px-4 py-3 bg-white/10 text-white border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#65B741] text-sm font-sans"
+                placeholder="Tell us a bit about yourself..."
+              />
             </div>
-            
-            <div className="text-center">
-              <Button type="submit" className="bg-[#65B741] hover:bg-[#4E9F3D] text-white px-8 py-3">
-                Send
+
+            <div className="text-center pt-2">
+              <Button 
+                type="submit" 
+                className="bg-[#65B741] hover:bg-[#4E9F3D] text-white px-8 py-3 w-full"
+              >
+                Submit Request
               </Button>
             </div>
           </form>
-        </div>
-      </div>
-    </section>
+        )}
+      </DialogContent>
+    </Dialog>
   );
 };
 
-export default ContactSection;
+export default CommunityModal;
