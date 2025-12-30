@@ -23,9 +23,9 @@ const Hero = () => {
           We build and partner on new ventures.
         </h1>
         <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          PreMoneyPost® is an operator-led venture group exploring ideas across industries and collaborating with builders at the earliest stages.
+          PreMoneyPost® builds companies. We explore ideas across industries, collaborate with early-stage founders, and invest selectively.
         </p>
-        <div className="flex flex-col sm:flex-row items-center gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <div className="flex flex-col items-center gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
           <Button 
             onClick={scrollToContact} 
             className="bg-[#65B741] hover:bg-[#4E9F3D] text-white text-lg px-8 py-6"
