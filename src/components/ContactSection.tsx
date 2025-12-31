@@ -166,7 +166,7 @@ const ContactSection = () => {
           
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-source-sans font-semibold mb-2 text-white">Name</label>
+              <label htmlFor="name" className="block text-base font-source-sans font-semibold mb-2 text-white">Name</label>
               <Input
                 type="text"
                 id="name"
@@ -185,7 +185,7 @@ const ContactSection = () => {
             </div>
 
             <div>
-              <label htmlFor="company" className="block text-sm font-source-sans font-semibold mb-2 text-white">Company</label>
+              <label htmlFor="company" className="block text-base font-source-sans font-semibold mb-2 text-white">Company</label>
               <Input
                 type="text"
                 id="company"
@@ -204,7 +204,7 @@ const ContactSection = () => {
             </div>
             
             <div>
-              <label htmlFor="email" className="block text-sm font-source-sans font-semibold mb-2 text-white">Email</label>
+              <label htmlFor="email" className="block text-base font-source-sans font-semibold mb-2 text-white">Email</label>
               <Input
                 type="email"
                 id="email"
@@ -223,7 +223,7 @@ const ContactSection = () => {
             </div>
             
             <div>
-              <label htmlFor="phone" className="block text-sm font-source-sans font-semibold mb-2 text-white">Phone</label>
+              <label htmlFor="phone" className="block text-base font-source-sans font-semibold mb-2 text-white">Phone</label>
               <div className={`relative flex bg-secondary text-black rounded-lg ${
                 touched.phone && errors.phone ? 'border-red-500 ring-1 ring-red-500' : ''
               }`}>
@@ -251,7 +251,7 @@ const ContactSection = () => {
             </div>
             
             <div>
-              <label htmlFor="message" className="block text-sm font-source-sans font-semibold mb-2 text-white">Message</label>
+              <label htmlFor="message" className="block text-base font-source-sans font-semibold mb-2 text-white">Message</label>
               <textarea
                 id="message"
                 name="message"
