@@ -27,7 +27,7 @@ const Hero = () => {
           alt="PMP Logo"
           className="mb-8 h-40 w-40 drop-shadow-lg"
         />
-        <h1 className="max-w-4xl animate-fade-in font-cardo text-4xl font-bold tracking-tight text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:text-5xl lg:text-6xl">
+        <h1 className="max-w-4xl animate-fade-in font-cardo text-5xl font-bold tracking-tight text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:text-6xl lg:text-7xl xl:text-8xl whitespace-nowrap">
           We build and partner on new ventures.
         </h1>
         <h2
