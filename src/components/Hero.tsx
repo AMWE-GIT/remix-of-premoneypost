@@ -25,9 +25,9 @@ const Hero = () => {
         <img
           src="/lovable-uploads/1e6ceb65-666a-4a1e-9283-286a21d449e1.png"
           alt="PMP Logo"
-          className="mb-6 h-40 w-40 drop-shadow-lg"
+          className="h-40 w-40 drop-shadow-lg"
         />
-        <h1 className="w-full text-center animate-fade-in font-cardo text-5xl font-bold tracking-tight text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:text-6xl lg:text-7xl xl:text-8xl whitespace-nowrap">
+        <h1 className="mt-6 w-full text-center animate-fade-in font-cardo text-5xl font-bold tracking-tight text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:text-6xl md:whitespace-nowrap lg:text-7xl xl:text-8xl">
           We build and partner on new ventures.
         </h1>
         <h2
@@ -37,7 +37,7 @@ const Hero = () => {
           PreMoneyPost<sup className="text-sm align-super">®</sup> builds companies.
         </h2>
         <h3
-          className="mb-10 mt-6 max-w-4xl animate-fade-in font-source-sans text-sm font-semibold text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] md:text-base lg:text-lg whitespace-nowrap"
+          className="mb-10 mt-6 max-w-4xl animate-fade-in font-source-sans text-sm font-semibold text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] md:text-base lg:text-lg"
           style={{ animationDelay: "0.3s" }}
         >
           We explore ideas across industries, collaborate with early-stage founders, and invest selectively.
