@@ -7,7 +7,7 @@ const CommunitySection = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
-    <section id="community" className="py-16 bg-black">
+    <section id="community" className="py-24 bg-black">
       <div className="container mx-auto px-4">
         {/* Full-width responsive box */}
         <div className="relative w-full aspect-[2/1] md:aspect-[3/1] lg:aspect-[4/1] rounded-2xl overflow-hidden">

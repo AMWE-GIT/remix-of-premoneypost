@@ -15,12 +15,11 @@ const Hero = () => {
       <img
         src={heroBanner}
         alt=""
-        className="absolute inset-0 h-full w-full object-cover saturate-125 contrast-110"
+        className="absolute inset-0 h-full w-full object-cover"
       />
 
       {/* Contrast + seamless blend into next section */}
-      <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/35 to-black" />
-      <div aria-hidden className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-b from-transparent to-black" />
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black" />
 
       <div className="container relative z-10 mx-auto flex flex-col items-center justify-center px-4 py-20 text-center">
         <img

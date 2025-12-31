@@ -58,7 +58,7 @@ const ProcessStepsSection = () => {
   ];
 
   return (
-    <section className="py-16">
+    <section className="py-24">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-cardo font-bold mb-8 text-left">

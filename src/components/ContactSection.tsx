@@ -140,7 +140,7 @@ const ContactSection = () => {
   // Render thank you message when form is submitted
   if (formSubmitted) {
     return (
-      <section id="contact" className="py-20">
+      <section id="contact" className="py-24">
         <div className="container mx-auto px-4 flex justify-center">
           <div className="max-w-lg w-full">
             <h2 className="text-4xl md:text-5xl font-cardo font-bold mb-16 text-center">Contact</h2>
@@ -159,7 +159,7 @@ const ContactSection = () => {
   }
 
   return (
-    <section id="contact" className="py-20">
+    <section id="contact" className="py-24">
       <div className="container mx-auto px-4 flex justify-center">
         <div className="max-w-lg w-full">
           <h2 className="text-4xl md:text-5xl font-cardo font-bold mb-16 text-center">Contact</h2>
