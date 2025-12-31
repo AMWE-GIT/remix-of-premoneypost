@@ -19,7 +19,7 @@ const CommunitySection = () => {
           <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 lg:p-12">
             <div className="max-w-2xl">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-cardo font-bold text-white mb-3">
-                The PreMoneyPost® Community
+                The PreMoneyPost<sup className="text-xs align-super">®</sup> Community
               </h2>
               <p className="font-source-sans font-semibold text-sm md:text-base text-white/80 mb-6">
                 A small, private network of founders and early-stage leaders sharing ideas, feedback, and trusted introductions.
