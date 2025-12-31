@@ -25,7 +25,7 @@ const Navbar = () => {
           <div className="flex items-center">
             <a 
               href="#community" 
-              className="w-36 text-center text-xl font-source-sans font-semibold hover:opacity-70 transition-opacity"
+              className="w-40 text-center text-2xl font-source-sans font-semibold hover:opacity-70 transition-opacity"
             >
               Community
             </a>
@@ -34,7 +34,7 @@ const Navbar = () => {
             </a>
             <a 
               href="#contact" 
-              className="w-36 text-center text-xl font-source-sans font-semibold hover:opacity-70 transition-opacity"
+              className="w-40 text-center text-2xl font-source-sans font-semibold hover:opacity-70 transition-opacity"
             >
               Contact
             </a>
