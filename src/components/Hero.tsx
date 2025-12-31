@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import heroBanner from '@/assets/hero-banner.jpg';
 
 const Hero = () => {
   const scrollToContact = () => {
@@ -11,7 +12,7 @@ const Hero = () => {
 
   return (
     <section className="flex items-center justify-center relative bg-black">
-      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-20"></div>
+      <img src={heroBanner} alt="" className="absolute inset-0 w-full h-full object-cover opacity-40" />
       <div className="container mx-auto px-4 relative z-10 py-20 flex flex-col items-center justify-center text-center min-h-screen">
         <img 
           src="/lovable-uploads/1e6ceb65-666a-4a1e-9283-286a21d449e1.png" 
