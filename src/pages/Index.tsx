@@ -19,10 +19,10 @@ const Index = () => {
         <AboutSection />
         <WhatWeDoSection />
         <ProcessStepsSection />
+        <CommunitySection />
         <ContactSection />
       </StarfieldWrapper>
       
-      <CommunitySection />
       <Footer />
     </div>
   );
