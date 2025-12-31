@@ -26,7 +26,7 @@ const CommunitySection = () => {
           {/* Content container - bottom half */}
           <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 lg:p-12">
             <div className="max-w-3xl">
-              <h2 className="text-4xl md:text-5xl lg:text-6xl font-cardo font-bold text-white mb-4 whitespace-nowrap">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-cardo font-bold text-white mb-4 md:whitespace-nowrap">
                 The PreMoneyPost<sup className="text-sm align-super">®</sup> Community
               </h2>
               <p className="font-source-sans font-semibold text-lg md:text-xl lg:text-2xl text-white/80 mb-8">
