@@ -140,10 +140,10 @@ const ContactSection = () => {
   // Render thank you message when form is submitted
   if (formSubmitted) {
     return (
-      <section id="contact" className="py-24">
+      <section id="contact" className="pt-32 pb-24">
         <div className="container mx-auto px-4 flex justify-center">
           <div className="max-w-lg w-full">
-            <h2 className="text-4xl md:text-5xl font-cardo font-bold mb-16 text-center">Contact</h2>
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-cardo font-bold mb-16 text-center">Contact</h2>
             
             <div className="text-center">
               <p className="text-xl font-source-sans font-semibold">
@@ -159,10 +159,10 @@ const ContactSection = () => {
   }
 
   return (
-    <section id="contact" className="py-24">
+    <section id="contact" className="pt-32 pb-24">
       <div className="container mx-auto px-4 flex justify-center">
         <div className="max-w-lg w-full">
-          <h2 className="text-4xl md:text-5xl font-cardo font-bold mb-16 text-center">Contact</h2>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-cardo font-bold mb-16 text-center">Contact</h2>
           
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
