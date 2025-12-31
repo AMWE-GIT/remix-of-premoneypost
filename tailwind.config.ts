@@ -21,6 +21,8 @@ export default {
 		fontFamily: {
 			'cardo': ['Cardo', 'serif'],
 			'pt-serif': ['PT Serif', 'serif'],
+			'source-sans': ['"Source Sans Pro"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+			'sans': ['"Source Sans Pro"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
 		},
 			colors: {
 				neon: {

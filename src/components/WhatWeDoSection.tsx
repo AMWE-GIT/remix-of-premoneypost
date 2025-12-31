@@ -23,21 +23,21 @@ const WhatWeDoSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-black">
+    <section className="py-16">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card, index) => (
             <div
               key={index}
-              className="flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-gradient-to-b hover:border-white/20 transition-all duration-300"
+              className="flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-black/50 hover:border-white/20 transition-all duration-300"
             >
-              {/* Image placeholder with gradient */}
-              <div className={`h-48 bg-gradient-to-br ${card.gradient}`} />
+              {/* Image placeholder with 16:9 aspect ratio */}
+              <div className={`aspect-video w-full bg-gradient-to-br ${card.gradient}`} />
               
               {/* Content */}
               <div className="p-6 flex-grow">
-                <h3 className="text-lg md:text-xl font-cardo font-semibold mb-2 text-white">{card.title}</h3>
-                <p className="font-pt-serif text-sm text-white/80 leading-relaxed">{card.description}</p>
+                <h3 className="text-xl md:text-2xl font-cardo font-semibold mb-3 text-white">{card.title}</h3>
+                <p className="font-source-sans font-semibold text-base text-white/80 leading-relaxed">{card.description}</p>
               </div>
             </div>
           ))}
