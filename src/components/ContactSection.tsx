@@ -266,7 +266,7 @@ const ContactSection = () => {
             </div>
             
             <div className="text-center">
-              <Button type="submit" className="bg-neon hover:bg-neon/80 text-neon-foreground px-8 py-3">
+              <Button type="submit" className="px-8 py-3">
                 Send
               </Button>
             </div>
