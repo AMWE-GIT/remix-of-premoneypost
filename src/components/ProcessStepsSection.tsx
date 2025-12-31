@@ -104,7 +104,7 @@ const ProcessStepsSection = () => {
                   onClick={scrollToContact}
                   className="text-xl px-10 py-7 font-semibold"
                 >
-                  Let's begin
+                  Let's Begin
                 </Button>
               </div>
             </CarouselItem>
