@@ -31,13 +31,13 @@ const Hero = () => {
           We build and partner on new ventures.
         </h1>
         <h2
-          className="mt-4 max-w-3xl animate-fade-in font-cardo text-2xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] md:text-3xl lg:text-4xl"
+          className="mt-6 max-w-3xl animate-fade-in font-cardo text-2xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] md:text-3xl lg:text-4xl"
           style={{ animationDelay: "0.15s" }}
         >
           PreMoneyPost<sup className="text-sm align-super">®</sup> builds companies.
         </h2>
         <h3
-          className="mb-10 mt-4 max-w-2xl animate-fade-in font-source-sans text-base font-semibold text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] md:text-lg"
+          className="mb-10 mt-6 max-w-4xl animate-fade-in font-source-sans text-sm font-semibold text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] md:text-base lg:text-lg whitespace-nowrap"
           style={{ animationDelay: "0.3s" }}
         >
           We explore ideas across industries, collaborate with early-stage founders, and invest selectively.
