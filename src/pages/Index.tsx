@@ -6,17 +6,23 @@ import ProcessStepsSection from "../components/ProcessStepsSection";
 import CommunitySection from "../components/CommunitySection";
 import ContactSection from "../components/ContactSection";
 import Footer from "../components/Footer";
+import StarfieldWrapper from "../components/StarfieldWrapper";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-black text-white starfield-bg">
+    <div className="min-h-screen bg-black text-white">
       <Navbar />
       <Hero />
-      <AboutSection />
-      <WhatWeDoSection />
-      <ProcessStepsSection />
+      
+      {/* Starfield only behind these sections */}
+      <StarfieldWrapper>
+        <AboutSection />
+        <WhatWeDoSection />
+        <ProcessStepsSection />
+        <ContactSection />
+      </StarfieldWrapper>
+      
       <CommunitySection />
-      <ContactSection />
       <Footer />
     </div>
   );
