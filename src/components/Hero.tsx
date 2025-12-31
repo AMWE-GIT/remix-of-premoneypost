@@ -15,7 +15,7 @@ const Hero = () => {
       <img
         src={heroBanner}
         alt=""
-        className="absolute inset-0 h-full w-full scale-[1.4] object-cover"
+        className="absolute inset-0 h-full w-full object-cover"
       />
 
       {/* Contrast + seamless blend into next section */}

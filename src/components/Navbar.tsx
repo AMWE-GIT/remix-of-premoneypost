@@ -24,7 +24,7 @@ const Navbar = () => {
         <nav className="grid grid-cols-[1fr_auto_1fr] items-center gap-x-6 md:gap-x-10 h-20">
           <a 
             href="#community" 
-            className="justify-self-end text-sm md:text-base font-source-sans font-semibold hover:opacity-70 transition-opacity"
+            className="justify-self-end text-lg md:text-2xl font-source-sans font-semibold hover:opacity-70 transition-opacity"
           >
             Community
           </a>
@@ -33,7 +33,7 @@ const Navbar = () => {
           </a>
           <a 
             href="#contact" 
-            className="justify-self-start text-sm md:text-base font-source-sans font-semibold hover:opacity-70 transition-opacity"
+            className="justify-self-start text-lg md:text-2xl font-source-sans font-semibold hover:opacity-70 transition-opacity"
           >
             Contact
           </a>
