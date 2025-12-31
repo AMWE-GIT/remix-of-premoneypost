@@ -10,7 +10,7 @@ const ContactSection = () => {
     company: '',
     email: '',
     phone: '',
-    countryCode: '+1-US',
+    countryCode: '+971',
     message: ''
   });
   

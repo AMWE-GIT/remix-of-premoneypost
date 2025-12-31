@@ -20,7 +20,7 @@ const CommunityModal = ({ open, onOpenChange }: CommunityModalProps) => {
     name: '',
     email: '',
     phone: '',
-    countryCode: '+1-US',
+    countryCode: '+971',
     company: '',
     message: ''
   });
@@ -148,7 +148,7 @@ const CommunityModal = ({ open, onOpenChange }: CommunityModalProps) => {
         name: '',
         email: '',
         phone: '',
-        countryCode: '+1-US',
+        countryCode: '+971',
         company: '',
         message: ''
       });
