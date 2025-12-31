@@ -71,10 +71,10 @@ const ProcessStepsSection = () => {
             align: "start",
             loop: false,
             containScroll: "trimSnaps",
-            dragFree: false,
+            dragFree: true,
           }}
           setApi={setApi}
-          className="w-full"
+          className="w-full touch-pan-x"
         >
           <CarouselContent className="-ml-0">
             {steps.map((step, index) => (
