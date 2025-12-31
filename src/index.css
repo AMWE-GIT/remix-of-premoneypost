@@ -97,78 +97,57 @@
 
   body {
     @apply bg-background text-foreground;
+    background: #000000;
   }
-}
 
-/* Starfield background */
-.starfield {
-  position: relative;
-  background: #000000;
-}
+  /* Global starfield background texture */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.06;
+    background-image: 
+      radial-gradient(1px 1px at 20px 30px, white 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 40px 70px, rgba(255,255,255,0.8) 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 50px 160px, rgba(255,255,255,0.6) 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 90px 40px, white 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.7) 0.5px, transparent 1px),
+      radial-gradient(1.5px 1.5px at 160px 120px, white 0.7px, transparent 1px),
+      radial-gradient(1px 1px at 200px 50px, rgba(255,255,255,0.5) 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 220px 90px, white 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 260px 150px, rgba(255,255,255,0.8) 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 300px 30px, white 0.5px, transparent 1px),
+      radial-gradient(1.5px 1.5px at 340px 100px, rgba(255,255,255,0.9) 0.7px, transparent 1px),
+      radial-gradient(1px 1px at 380px 60px, white 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 420px 140px, rgba(255,255,255,0.6) 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 460px 20px, white 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 500px 80px, rgba(255,255,255,0.7) 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 540px 130px, white 0.5px, transparent 1px),
+      radial-gradient(1.5px 1.5px at 580px 45px, rgba(255,255,255,0.8) 0.7px, transparent 1px),
+      radial-gradient(1px 1px at 620px 110px, white 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 80px 200px, rgba(255,255,255,0.7) 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 150px 250px, white 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 230px 220px, rgba(255,255,255,0.6) 0.5px, transparent 1px),
+      radial-gradient(1.5px 1.5px at 310px 280px, white 0.7px, transparent 1px),
+      radial-gradient(1px 1px at 390px 240px, rgba(255,255,255,0.8) 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 470px 300px, white 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 550px 260px, rgba(255,255,255,0.5) 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 35px 45px, rgba(255,255,255,0.4) 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 75px 125px, rgba(255,255,255,0.5) 0.5px, transparent 1px),
+      radial-gradient(1.5px 1.5px at 115px 85px, rgba(255,255,255,0.6) 0.7px, transparent 1px),
+      radial-gradient(1px 1px at 175px 165px, rgba(255,255,255,0.4) 0.5px, transparent 1px),
+      radial-gradient(1px 1px at 245px 55px, rgba(255,255,255,0.5) 0.5px, transparent 1px);
+    background-size: 650px 350px;
+    background-repeat: repeat;
+  }
 
-.starfield::before,
-.starfield::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
-  pointer-events: none;
-}
-
-.starfield::before {
-  background-image: 
-    radial-gradient(1px 1px at 20px 30px, white 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 40px 70px, rgba(255,255,255,0.8) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 50px 160px, rgba(255,255,255,0.6) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 90px 40px, white 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.7) 0.5px, transparent 1px),
-    radial-gradient(1.5px 1.5px at 160px 120px, white 0.7px, transparent 1px),
-    radial-gradient(1px 1px at 200px 50px, rgba(255,255,255,0.5) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 220px 90px, white 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 260px 150px, rgba(255,255,255,0.8) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 300px 30px, white 0.5px, transparent 1px),
-    radial-gradient(1.5px 1.5px at 340px 100px, rgba(255,255,255,0.9) 0.7px, transparent 1px),
-    radial-gradient(1px 1px at 380px 60px, white 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 420px 140px, rgba(255,255,255,0.6) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 460px 20px, white 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 500px 80px, rgba(255,255,255,0.7) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 540px 130px, white 0.5px, transparent 1px),
-    radial-gradient(1.5px 1.5px at 580px 45px, rgba(255,255,255,0.8) 0.7px, transparent 1px),
-    radial-gradient(1px 1px at 620px 110px, white 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 80px 200px, rgba(255,255,255,0.7) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 150px 250px, white 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 230px 220px, rgba(255,255,255,0.6) 0.5px, transparent 1px),
-    radial-gradient(1.5px 1.5px at 310px 280px, white 0.7px, transparent 1px),
-    radial-gradient(1px 1px at 390px 240px, rgba(255,255,255,0.8) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 470px 300px, white 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 550px 260px, rgba(255,255,255,0.5) 0.5px, transparent 1px);
-  background-size: 650px 350px;
-  background-repeat: repeat;
-}
-
-.starfield::after {
-  background-image: 
-    radial-gradient(1px 1px at 35px 45px, rgba(255,255,255,0.4) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 75px 125px, rgba(255,255,255,0.5) 0.5px, transparent 1px),
-    radial-gradient(1.5px 1.5px at 115px 85px, rgba(255,255,255,0.6) 0.7px, transparent 1px),
-    radial-gradient(1px 1px at 175px 165px, rgba(255,255,255,0.4) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 245px 55px, rgba(255,255,255,0.5) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 285px 195px, rgba(255,255,255,0.6) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 355px 75px, rgba(255,255,255,0.4) 0.5px, transparent 1px),
-    radial-gradient(1.5px 1.5px at 415px 185px, rgba(255,255,255,0.5) 0.7px, transparent 1px),
-    radial-gradient(1px 1px at 485px 115px, rgba(255,255,255,0.6) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 525px 205px, rgba(255,255,255,0.4) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 595px 95px, rgba(255,255,255,0.5) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 55px 275px, rgba(255,255,255,0.4) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 135px 315px, rgba(255,255,255,0.5) 0.5px, transparent 1px),
-    radial-gradient(1.5px 1.5px at 215px 285px, rgba(255,255,255,0.6) 0.7px, transparent 1px),
-    radial-gradient(1px 1px at 295px 335px, rgba(255,255,255,0.4) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 375px 295px, rgba(255,255,255,0.5) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 455px 345px, rgba(255,255,255,0.6) 0.5px, transparent 1px),
-    radial-gradient(1px 1px at 535px 305px, rgba(255,255,255,0.4) 0.5px, transparent 1px);
-  background-size: 620px 380px;
-  background-repeat: repeat;
+  #root {
+    position: relative;
+    z-index: 1;
+  }
 }

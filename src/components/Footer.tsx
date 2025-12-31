@@ -1,7 +1,7 @@
 
 const Footer = () => {
   return (
-    <footer className="py-10 border-t border-gray-800">
+    <footer className="py-10 border-t border-gray-800 bg-black">
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-center gap-6">
           <span className="text-white font-medium text-xl md:text-2xl">PreMoneyPost®</span>
