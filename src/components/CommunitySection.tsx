@@ -22,22 +22,22 @@ const CommunitySection = () => {
           
           {/* Content container - bottom half */}
           <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 lg:p-12">
-            <div className="max-w-2xl">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-cardo font-bold text-white mb-3">
-                The PreMoneyPost<sup className="text-xs align-super">®</sup> Community
+            <div className="max-w-3xl">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-cardo font-bold text-white mb-4">
+                The PreMoneyPost<sup className="text-sm align-super">®</sup> Community
               </h2>
-              <p className="font-source-sans font-semibold text-sm md:text-base text-white/80 mb-6">
+              <p className="font-source-sans font-semibold text-base md:text-lg lg:text-xl text-white/80 mb-8">
                 A small, private network of founders and early-stage leaders sharing ideas, feedback, and trusted introductions.
               </p>
               
               <Button 
                 onClick={() => setModalOpen(true)}
-                className="px-6 py-3"
+                className="px-8 py-4 text-base"
               >
                 Request an Invite
               </Button>
               
-              <p className="font-source-sans font-semibold text-white/60 text-xs mt-3">
+              <p className="font-source-sans font-semibold text-white/60 text-sm mt-4">
                 Invites are limited and extended based on engagement.
               </p>
             </div>
