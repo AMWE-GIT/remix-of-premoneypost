@@ -25,13 +25,13 @@ const Hero = () => {
         <img
           src="/lovable-uploads/1e6ceb65-666a-4a1e-9283-286a21d449e1.png"
           alt="PMP Logo"
-          className="mb-8 h-40 w-40 drop-shadow-lg"
+          className="mb-6 h-40 w-40 drop-shadow-lg"
         />
-        <h1 className="animate-fade-in font-cardo text-5xl font-bold tracking-tight text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:text-6xl lg:text-7xl xl:text-8xl whitespace-nowrap">
+        <h1 className="w-full text-center animate-fade-in font-cardo text-5xl font-bold tracking-tight text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:text-6xl lg:text-7xl xl:text-8xl whitespace-nowrap">
           We build and partner on new ventures.
         </h1>
         <h2
-          className="mt-6 max-w-3xl animate-fade-in font-cardo text-2xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] md:text-3xl lg:text-4xl"
+          className="mt-6 animate-fade-in font-cardo text-2xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] md:text-3xl lg:text-4xl"
           style={{ animationDelay: "0.15s" }}
         >
           PreMoneyPost<sup className="text-sm align-super">®</sup> builds companies.
