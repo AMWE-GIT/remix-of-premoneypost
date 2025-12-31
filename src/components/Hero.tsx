@@ -37,7 +37,7 @@ const Hero = () => {
           PreMoneyPost® builds companies. We explore ideas across industries, collaborate with early-stage founders, and invest selectively.
         </p>
         <div className="flex animate-fade-in flex-col items-center gap-4" style={{ animationDelay: "0.4s" }}>
-          <Button onClick={scrollToContact} className="bg-neon px-8 py-6 text-lg text-neon-foreground hover:bg-neon/80">
+          <Button onClick={scrollToContact} className="px-8 py-6 text-lg">
             Start a Conversation
           </Button>
           <button
