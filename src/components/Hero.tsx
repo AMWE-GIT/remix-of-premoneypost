@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 
 const Hero = () => {
@@ -22,7 +21,7 @@ const Hero = () => {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-cardo font-bold tracking-tight mb-6 max-w-4xl animate-fade-in">
           We build and partner on new ventures.
         </h1>
-        <p className="text-base md:text-lg font-pt-serif text-white max-w-2xl mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <p className="text-base md:text-lg font-source-sans font-semibold text-white max-w-2xl mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
           PreMoneyPost® builds companies. We explore ideas across industries, collaborate with early-stage founders, and invest selectively.
         </p>
         <div className="flex flex-col items-center gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
@@ -34,7 +33,7 @@ const Hero = () => {
           </Button>
           <button 
             onClick={scrollToCommunity}
-            className="text-gray-300 hover:text-white underline underline-offset-4 transition-colors"
+            className="text-white/80 hover:text-white underline underline-offset-4 transition-colors font-source-sans font-semibold"
           >
             Learn about the community
           </button>

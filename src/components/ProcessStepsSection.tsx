@@ -90,7 +90,7 @@ const ProcessStepsSection = () => {
                   
                   <div className="flex flex-col justify-center">
                     <h3 className="text-2xl md:text-3xl font-cardo font-semibold mb-2 text-white">{step.title}</h3>
-                    <p className="text-base md:text-lg font-pt-serif text-white/80">{step.description}</p>
+                    <p className="text-base md:text-lg font-source-sans font-semibold text-white/80">{step.description}</p>
                   </div>
                   
                   {/* Separator after each item */}

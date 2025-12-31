@@ -21,7 +21,7 @@ const CommunitySection = () => {
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-cardo font-bold text-white mb-3">
                 The PreMoneyPost® Community
               </h2>
-              <p className="font-pt-serif text-sm md:text-base text-white/80 mb-6">
+              <p className="font-source-sans font-semibold text-sm md:text-base text-white/80 mb-6">
                 A small, private network of founders and early-stage leaders sharing ideas, feedback, and trusted introductions.
               </p>
               
@@ -32,7 +32,7 @@ const CommunitySection = () => {
                 Request an invite
               </Button>
               
-              <p className="text-gray-500 text-xs mt-3">
+              <p className="font-source-sans font-semibold text-white/60 text-xs mt-3">
                 Invites are limited and extended based on engagement.
               </p>
             </div>

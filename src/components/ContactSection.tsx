@@ -146,8 +146,8 @@ const ContactSection = () => {
             <h2 className="text-4xl md:text-5xl font-cardo font-bold mb-16 text-center">Contact</h2>
             
             <div className="text-center">
-              <p className="text-xl">
-                <span className="text-[#9b87f5] font-medium">Thank you</span> for filling out the form.
+              <p className="text-xl font-source-sans font-semibold">
+                <span className="text-neon">Thank you</span> for filling out the form.
                 <br />
                 We'll get back to you within 48 hours.
               </p>
@@ -166,7 +166,7 @@ const ContactSection = () => {
           
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-pt-serif font-medium mb-2">Name</label>
+              <label htmlFor="name" className="block text-sm font-source-sans font-semibold mb-2 text-white">Name</label>
               <Input
                 type="text"
                 id="name"
@@ -180,12 +180,12 @@ const ContactSection = () => {
                 placeholder="Your name"
               />
               {touched.name && errors.name && (
-                <p className="text-red-500 text-sm mt-1">{errors.name}</p>
+                <p className="text-red-500 text-sm mt-1 font-source-sans">{errors.name}</p>
               )}
             </div>
 
             <div>
-              <label htmlFor="company" className="block text-sm font-pt-serif font-medium mb-2">Company</label>
+              <label htmlFor="company" className="block text-sm font-source-sans font-semibold mb-2 text-white">Company</label>
               <Input
                 type="text"
                 id="company"
@@ -199,12 +199,12 @@ const ContactSection = () => {
                 placeholder="Your company"
               />
               {touched.company && errors.company && (
-                <p className="text-red-500 text-sm mt-1">{errors.company}</p>
+                <p className="text-red-500 text-sm mt-1 font-source-sans">{errors.company}</p>
               )}
             </div>
             
             <div>
-              <label htmlFor="email" className="block text-sm font-pt-serif font-medium mb-2">Email</label>
+              <label htmlFor="email" className="block text-sm font-source-sans font-semibold mb-2 text-white">Email</label>
               <Input
                 type="email"
                 id="email"
@@ -218,12 +218,12 @@ const ContactSection = () => {
                 placeholder="your.email@example.com"
               />
               {touched.email && errors.email && (
-                <p className="text-red-500 text-sm mt-1">{errors.email}</p>
+                <p className="text-red-500 text-sm mt-1 font-source-sans">{errors.email}</p>
               )}
             </div>
             
             <div>
-              <label htmlFor="phone" className="block text-sm font-pt-serif font-medium mb-2">Phone</label>
+              <label htmlFor="phone" className="block text-sm font-source-sans font-semibold mb-2 text-white">Phone</label>
               <div className={`relative flex bg-secondary text-black rounded-lg ${
                 touched.phone && errors.phone ? 'border-red-500 ring-1 ring-red-500' : ''
               }`}>
@@ -246,12 +246,12 @@ const ContactSection = () => {
                 />
               </div>
               {touched.phone && errors.phone && (
-                <p className="text-red-500 text-sm mt-1">{errors.phone}</p>
+                <p className="text-red-500 text-sm mt-1 font-source-sans">{errors.phone}</p>
               )}
             </div>
             
             <div>
-              <label htmlFor="message" className="block text-sm font-pt-serif font-medium mb-2">Message</label>
+              <label htmlFor="message" className="block text-sm font-source-sans font-semibold mb-2 text-white">Message</label>
               <textarea
                 id="message"
                 name="message"
@@ -259,7 +259,7 @@ const ContactSection = () => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 rows={5}
-                className="w-full px-4 py-3 bg-secondary text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-white text-sm font-sans"
+                className="w-full px-4 py-3 bg-secondary text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-white text-sm font-source-sans"
                 placeholder="Tell us about your project or inquiry..."
               ></textarea>
               {/* No error message for the message field */}
