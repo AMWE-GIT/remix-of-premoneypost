@@ -30,12 +30,18 @@ const Hero = () => {
         <h1 className="max-w-4xl animate-fade-in font-cardo text-4xl font-bold tracking-tight text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:text-5xl lg:text-6xl">
           We build and partner on new ventures.
         </h1>
-        <p
-          className="mb-10 mt-6 max-w-2xl animate-fade-in font-source-sans text-base font-semibold text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] md:text-lg"
-          style={{ animationDelay: "0.2s" }}
+        <h2
+          className="mt-4 max-w-3xl animate-fade-in font-cardo text-2xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] md:text-3xl lg:text-4xl"
+          style={{ animationDelay: "0.15s" }}
         >
-          PreMoneyPost® builds companies. We explore ideas across industries, collaborate with early-stage founders, and invest selectively.
-        </p>
+          PreMoneyPost<sup className="text-sm align-super">®</sup> builds companies.
+        </h2>
+        <h3
+          className="mb-10 mt-4 max-w-2xl animate-fade-in font-source-sans text-base font-semibold text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] md:text-lg"
+          style={{ animationDelay: "0.3s" }}
+        >
+          We explore ideas across industries, collaborate with early-stage founders, and invest selectively.
+        </h3>
         <div className="flex animate-fade-in flex-col items-center gap-4" style={{ animationDelay: "0.4s" }}>
           <Button onClick={scrollToContact} className="px-8 py-6 text-lg">
             Start a Conversation
