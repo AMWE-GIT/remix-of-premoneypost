@@ -1,40 +1,49 @@
 import { Button } from "@/components/ui/button";
-import heroBanner from '@/assets/hero-banner.jpg';
+import heroBanner from "@/assets/hero-banner.jpg";
 
 const Hero = () => {
   const scrollToContact = () => {
-    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   };
-  
+
   const scrollToCommunity = () => {
-    document.getElementById('community')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById("community")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <section className="flex items-center justify-center relative bg-black">
-      <img src={heroBanner} alt="" className="absolute inset-0 w-full h-full object-cover opacity-70" />
-      <div className="container mx-auto px-4 relative z-10 py-20 flex flex-col items-center justify-center text-center min-h-screen">
-        <img 
-          src="/lovable-uploads/1e6ceb65-666a-4a1e-9283-286a21d449e1.png" 
-          alt="PMP Logo" 
-          className="mb-8 w-40 h-40 drop-shadow-lg"
+    <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden bg-black">
+      <img
+        src={heroBanner}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover saturate-125 contrast-110"
+      />
+
+      {/* Contrast + seamless blend into next section */}
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/35 to-black" />
+      <div aria-hidden className="absolute inset-x-0 bottom-0 h-56 bg-gradient-to-b from-transparent to-black" />
+
+      <div className="container relative z-10 mx-auto flex flex-col items-center justify-center px-4 py-20 text-center">
+        <img
+          src="/lovable-uploads/1e6ceb65-666a-4a1e-9283-286a21d449e1.png"
+          alt="PMP Logo"
+          className="mb-8 h-40 w-40 drop-shadow-lg"
         />
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-cardo font-bold tracking-tight mb-6 max-w-4xl animate-fade-in drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+        <h1 className="max-w-4xl animate-fade-in font-cardo text-4xl font-bold tracking-tight text-white drop-shadow-[0_2px_14px_rgba(0,0,0,0.95)] md:text-5xl lg:text-6xl">
           We build and partner on new ventures.
         </h1>
-        <p className="text-base md:text-lg font-source-sans font-semibold text-white max-w-2xl mb-10 animate-fade-in drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]" style={{ animationDelay: '0.2s' }}>
+        <p
+          className="mb-10 mt-6 max-w-2xl animate-fade-in font-source-sans text-base font-semibold text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] md:text-lg"
+          style={{ animationDelay: "0.2s" }}
+        >
           PreMoneyPost® builds companies. We explore ideas across industries, collaborate with early-stage founders, and invest selectively.
         </p>
-        <div className="flex flex-col items-center gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          <Button 
-            onClick={scrollToContact} 
-            className="bg-neon hover:bg-neon/80 text-neon-foreground text-lg px-8 py-6"
-          >
+        <div className="flex animate-fade-in flex-col items-center gap-4" style={{ animationDelay: "0.4s" }}>
+          <Button onClick={scrollToContact} className="bg-neon px-8 py-6 text-lg text-neon-foreground hover:bg-neon/80">
             Start a Conversation
           </Button>
-          <button 
+          <button
             onClick={scrollToCommunity}
-            className="text-white/80 hover:text-white underline underline-offset-4 transition-colors font-source-sans font-semibold"
+            className="font-source-sans font-semibold text-white/80 underline underline-offset-4 transition-colors hover:text-white"
           >
             Learn about the community
           </button>
