@@ -19,7 +19,7 @@ const Hero = () => {
       />
 
       {/* Contrast + seamless blend into next section */}
-      <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-black/25 via-black/10 to-black/15" />
+      <div aria-hidden className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black" />
 
       <div className="container relative z-10 mx-auto flex flex-col items-center justify-center px-4 py-20 text-center">
         <img
