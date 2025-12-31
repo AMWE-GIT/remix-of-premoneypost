@@ -34,7 +34,7 @@ const CommunitySection = () => {
                 onClick={() => setModalOpen(true)}
                 className="px-6 py-3"
               >
-                Request an invite
+                Request an Invite
               </Button>
               
               <p className="font-source-sans font-semibold text-white/60 text-xs mt-3">
