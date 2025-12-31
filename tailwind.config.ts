@@ -18,7 +18,14 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'cardo': ['Cardo', 'serif'],
+			},
 			colors: {
+				neon: {
+					DEFAULT: 'hsl(var(--neon))',
+					foreground: 'hsl(var(--neon-foreground))'
+				},
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
 				ring: 'hsl(var(--ring))',

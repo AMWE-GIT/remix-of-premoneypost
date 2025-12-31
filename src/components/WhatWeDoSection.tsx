@@ -3,7 +3,7 @@ const WhatWeDoSection = () => {
     {
       title: "Build",
       description: "We build our own companies. From early ideas to launched products, we create ventures we intend to own and grow.",
-      gradient: "from-[#65B741]/20 to-[#4E9F3D]/10"
+      gradient: "from-neon/20 to-neon/5"
     },
     {
       title: "Explore",
@@ -13,7 +13,7 @@ const WhatWeDoSection = () => {
     {
       title: "Collaborate",
       description: "We collaborate early with founders. When there's overlap in thinking and ambition, we get involved early to shape direction and execution.",
-      gradient: "from-[#65B741]/20 to-[#4E9F3D]/10"
+      gradient: "from-neon/20 to-neon/5"
     },
     {
       title: "Invest",
@@ -36,7 +36,7 @@ const WhatWeDoSection = () => {
               
               {/* Content */}
               <div className="p-6 flex-grow">
-                <h3 className="text-xl font-semibold mb-3 text-white">{card.title}</h3>
+                <h3 className="text-xl font-cardo font-semibold mb-3 text-white">{card.title}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed">{card.description}</p>
               </div>
             </div>

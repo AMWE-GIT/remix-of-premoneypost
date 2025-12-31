@@ -191,7 +191,7 @@ const CommunityModal = ({ open, onOpenChange }: CommunityModalProps) => {
                 value={formData.name}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                className={`w-full px-4 py-3 bg-white/10 text-white border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#65B741] ${
+                className={`w-full px-4 py-3 bg-white/10 text-white border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon ${
                   touched.name && errors.name ? 'border-red-500 ring-1 ring-red-500' : ''
                 }`}
                 placeholder="Your name"
@@ -210,7 +210,7 @@ const CommunityModal = ({ open, onOpenChange }: CommunityModalProps) => {
                 value={formData.email}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                className={`w-full px-4 py-3 bg-white/10 text-white border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#65B741] ${
+                className={`w-full px-4 py-3 bg-white/10 text-white border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon ${
                   touched.email && errors.email ? 'border-red-500 ring-1 ring-red-500' : ''
                 }`}
                 placeholder="your.email@example.com"
@@ -257,7 +257,7 @@ const CommunityModal = ({ open, onOpenChange }: CommunityModalProps) => {
                 value={formData.company}
                 onChange={handleChange}
                 onBlur={handleBlur}
-                className={`w-full px-4 py-3 bg-white/10 text-white border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#65B741] ${
+                className={`w-full px-4 py-3 bg-white/10 text-white border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon ${
                   touched.company && errors.company ? 'border-red-500 ring-1 ring-red-500' : ''
                 }`}
                 placeholder="Your company"
@@ -276,7 +276,7 @@ const CommunityModal = ({ open, onOpenChange }: CommunityModalProps) => {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 rows={3}
-                className="w-full px-4 py-3 bg-white/10 text-white border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#65B741] text-sm font-sans"
+                className="w-full px-4 py-3 bg-white/10 text-white border border-white/20 rounded-lg focus:outline-none focus:ring-2 focus:ring-neon text-sm font-sans"
                 placeholder="Tell us a bit about yourself..."
               />
             </div>
@@ -284,7 +284,7 @@ const CommunityModal = ({ open, onOpenChange }: CommunityModalProps) => {
             <div className="text-center pt-2">
               <Button 
                 type="submit" 
-                className="bg-[#65B741] hover:bg-[#4E9F3D] text-white px-8 py-3 w-full"
+                className="bg-neon hover:bg-neon/80 text-neon-foreground px-8 py-3 w-full"
               >
                 Submit Request
               </Button>

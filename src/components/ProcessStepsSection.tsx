@@ -6,6 +6,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
 
 const ProcessStepsSection = () => {
@@ -34,6 +35,10 @@ const ProcessStepsSection = () => {
     };
   }, [api]);
 
+  const scrollToContact = () => {
+    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   const steps = [
     {
       number: "1",
@@ -53,8 +58,12 @@ const ProcessStepsSection = () => {
   ];
 
   return (
-    <section className="py-16 bg-black">
-      <div className="container mx-auto">
+    <section className="py-16">
+      <div className="container mx-auto px-4">
+        <h2 className="text-5xl md:text-6xl lg:text-7xl font-cardo font-bold mb-8 text-left pl-4">
+          What's next?
+        </h2>
+        
         <Carousel
           opts={{
             align: "start",
@@ -69,11 +78,11 @@ const ProcessStepsSection = () => {
             {steps.map((step, index) => (
               <CarouselItem 
                 key={index} 
-                className="pr-4 md:basis-1/2 lg:basis-[33%]"
+                className="pr-4 md:basis-1/2 lg:basis-[30%]"
               >
                 <div className="p-6 h-full relative flex">
                   {/* Large number */}
-                  <span className="text-7xl md:text-8xl font-bold text-[#65B741]/30 mr-4 leading-none">
+                  <span className="text-7xl md:text-8xl font-bold text-neon/40 mr-4 leading-none">
                     {step.number}
                   </span>
                   
@@ -82,29 +91,39 @@ const ProcessStepsSection = () => {
                     <p className="text-gray-400">{step.description}</p>
                   </div>
                   
-                  {/* Separator after each item except the last */}
-                  {index < steps.length - 1 && (
-                    <Separator orientation="vertical" className="absolute right-0 top-6 bottom-6 h-auto bg-white/20" />
-                  )}
+                  {/* Separator after each item */}
+                  <Separator orientation="vertical" className="absolute right-0 top-6 bottom-6 h-auto bg-white/20" />
                 </div>
               </CarouselItem>
             ))}
+            
+            {/* CTA Item */}
+            <CarouselItem className="pr-4 md:basis-1/2 lg:basis-[30%]">
+              <div className="p-6 h-full flex items-center justify-center">
+                <Button 
+                  onClick={scrollToContact}
+                  className="bg-neon hover:bg-neon/80 text-neon-foreground text-xl px-10 py-8 font-semibold"
+                >
+                  Let's begin →
+                </Button>
+              </div>
+            </CarouselItem>
           </CarouselContent>
           
           {/* Navigation buttons */}
           <div className="flex justify-center mt-8 gap-2 mx-auto">
             <CarouselPrevious 
-              className={`relative static text-white ${
+              className={`relative static text-neon-foreground ${
                 canScrollPrev 
-                  ? "bg-[#65B741] hover:bg-[#4E9F3D]" 
+                  ? "bg-neon hover:bg-neon/80" 
                   : "bg-gray-500 cursor-not-allowed"
               }`} 
               disabled={!canScrollPrev}
             />
             <CarouselNext 
-              className={`relative static text-white ${
+              className={`relative static text-neon-foreground ${
                 canScrollNext 
-                  ? "bg-[#65B741] hover:bg-[#4E9F3D]" 
+                  ? "bg-neon hover:bg-neon/80" 
                   : "bg-gray-500 cursor-not-allowed"
               }`} 
               disabled={!canScrollNext}

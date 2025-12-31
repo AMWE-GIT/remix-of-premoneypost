@@ -143,7 +143,7 @@ const ContactSection = () => {
       <section id="contact" className="py-20">
         <div className="container mx-auto px-4 flex justify-center">
           <div className="max-w-lg w-full">
-            <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">Contact</h2>
+            <h2 className="text-4xl md:text-5xl font-cardo font-bold mb-16 text-center">Contact</h2>
             
             <div className="text-center">
               <p className="text-xl">
@@ -162,7 +162,7 @@ const ContactSection = () => {
     <section id="contact" className="py-20">
       <div className="container mx-auto px-4 flex justify-center">
         <div className="max-w-lg w-full">
-          <h2 className="text-4xl md:text-5xl font-bold mb-16 text-center">Contact</h2>
+          <h2 className="text-4xl md:text-5xl font-cardo font-bold mb-16 text-center">Contact</h2>
           
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
@@ -266,7 +266,7 @@ const ContactSection = () => {
             </div>
             
             <div className="text-center">
-              <Button type="submit" className="bg-[#65B741] hover:bg-[#4E9F3D] text-white px-8 py-3">
+              <Button type="submit" className="bg-neon hover:bg-neon/80 text-neon-foreground px-8 py-3">
                 Send
               </Button>
             </div>
