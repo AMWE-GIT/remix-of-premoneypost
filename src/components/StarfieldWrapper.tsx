@@ -40,7 +40,7 @@ const StarfieldWrapper = ({ children }: StarfieldWrapperProps) => {
           `,
           backgroundSize: '650px 350px',
           backgroundRepeat: 'repeat',
-          opacity: 0.15,
+          opacity: 1,
         }}
       />
       {/* Content layer */}
