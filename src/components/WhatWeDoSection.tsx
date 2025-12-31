@@ -1,24 +1,29 @@
+import cardBuild from "@/assets/card-build.jpg";
+import cardExplore from "@/assets/card-explore.jpg";
+import cardCollaborate from "@/assets/card-collaborate.jpg";
+import cardInvest from "@/assets/card-invest.jpg";
+
 const WhatWeDoSection = () => {
   const cards = [
     {
       title: "Build",
       description: "We build our own companies. From early ideas to launched products, we create ventures we intend to own and grow.",
-      gradient: "from-neon/20 to-neon/5"
+      image: cardBuild
     },
     {
       title: "Explore",
       description: "We explore ideas across industries. We spend time understanding problems, markets, and opportunities before committing to what to build or back.",
-      gradient: "from-[#9b87f5]/20 to-[#7E69AB]/10"
+      image: cardExplore
     },
     {
       title: "Collaborate",
       description: "We collaborate early with founders. When there's overlap in thinking and ambition, we get involved early to shape direction and execution.",
-      gradient: "from-neon/20 to-neon/5"
+      image: cardCollaborate
     },
     {
       title: "Invest",
       description: "We invest selectively. In some cases, we commit capital or resources to ideas and companies with clear potential.",
-      gradient: "from-[#9b87f5]/20 to-[#7E69AB]/10"
+      image: cardInvest
     }
   ];
 
@@ -31,8 +36,14 @@ const WhatWeDoSection = () => {
               key={index}
               className="flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-[#050505] hover:border-white/20 transition-all duration-300"
             >
-              {/* Image placeholder with 16:9 aspect ratio */}
-              <div className={`aspect-video w-full bg-gradient-to-br ${card.gradient}`} />
+              {/* Image with 16:9 aspect ratio */}
+              <div className="aspect-video w-full overflow-hidden">
+                <img 
+                  src={card.image} 
+                  alt={card.title}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               
               {/* Content */}
               <div className="p-6 flex-grow">
