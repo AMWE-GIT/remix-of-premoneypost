@@ -7,7 +7,7 @@ const Hero = () => {
   };
   
   const scrollToCommunity = () => {
-    document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' });
+    document.getElementById('community')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
@@ -19,10 +19,10 @@ const Hero = () => {
           alt="PMP Logo" 
           className="mb-8 w-40 h-40"
         />
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-cardo font-bold tracking-tight mb-6 max-w-4xl animate-fade-in">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-cardo font-bold tracking-tight mb-6 max-w-4xl animate-fade-in">
           We build and partner on new ventures.
         </h1>
-        <p className="text-lg md:text-xl text-gray-300 max-w-2xl mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <p className="text-base md:text-lg font-pt-serif text-muted-foreground max-w-2xl mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
           PreMoneyPost® builds companies. We explore ideas across industries, collaborate with early-stage founders, and invest selectively.
         </p>
         <div className="flex flex-col items-center gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>

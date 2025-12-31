@@ -166,7 +166,7 @@ const ContactSection = () => {
           
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-medium mb-2">Name</label>
+              <label htmlFor="name" className="block text-sm font-pt-serif font-medium mb-2">Name</label>
               <Input
                 type="text"
                 id="name"
@@ -185,7 +185,7 @@ const ContactSection = () => {
             </div>
 
             <div>
-              <label htmlFor="company" className="block text-sm font-medium mb-2">Company</label>
+              <label htmlFor="company" className="block text-sm font-pt-serif font-medium mb-2">Company</label>
               <Input
                 type="text"
                 id="company"
@@ -204,7 +204,7 @@ const ContactSection = () => {
             </div>
             
             <div>
-              <label htmlFor="email" className="block text-sm font-medium mb-2">Email</label>
+              <label htmlFor="email" className="block text-sm font-pt-serif font-medium mb-2">Email</label>
               <Input
                 type="email"
                 id="email"
@@ -223,7 +223,7 @@ const ContactSection = () => {
             </div>
             
             <div>
-              <label htmlFor="phone" className="block text-sm font-medium mb-2">Phone</label>
+              <label htmlFor="phone" className="block text-sm font-pt-serif font-medium mb-2">Phone</label>
               <div className={`relative flex bg-secondary text-black rounded-lg ${
                 touched.phone && errors.phone ? 'border-red-500 ring-1 ring-red-500' : ''
               }`}>
@@ -251,7 +251,7 @@ const ContactSection = () => {
             </div>
             
             <div>
-              <label htmlFor="message" className="block text-sm font-medium mb-2">Message</label>
+              <label htmlFor="message" className="block text-sm font-pt-serif font-medium mb-2">Message</label>
               <textarea
                 id="message"
                 name="message"
