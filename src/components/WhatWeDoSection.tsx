@@ -29,15 +29,15 @@ const WhatWeDoSection = () => {
           {cards.map((card, index) => (
             <div
               key={index}
-              className="flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-black/50 hover:border-white/20 transition-all duration-300"
+              className="flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-[#050505] hover:border-white/20 transition-all duration-300"
             >
               {/* Image placeholder with 16:9 aspect ratio */}
               <div className={`aspect-video w-full bg-gradient-to-br ${card.gradient}`} />
               
               {/* Content */}
               <div className="p-6 flex-grow">
-                <h3 className="text-xl md:text-2xl font-cardo font-semibold mb-3 text-white">{card.title}</h3>
-                <p className="font-source-sans font-semibold text-base text-white/80 leading-relaxed">{card.description}</p>
+                <h3 className="text-2xl md:text-3xl font-cardo font-semibold mb-3 text-white">{card.title}</h3>
+                <p className="font-source-sans font-semibold text-base md:text-lg text-white/80 leading-relaxed">{card.description}</p>
               </div>
             </div>
           ))}
