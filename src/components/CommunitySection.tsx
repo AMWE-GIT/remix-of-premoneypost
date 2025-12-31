@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import CommunityModal from './CommunityModal';
+import communityBanner from '@/assets/community-banner.jpg';
 
 const CommunitySection = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -9,11 +10,15 @@ const CommunitySection = () => {
     <section id="community" className="py-16 bg-black">
       <div className="container mx-auto px-4">
         {/* Full-width responsive box */}
-        <div className="relative w-full aspect-[2/1] md:aspect-[3/1] lg:aspect-[4/1] rounded-2xl overflow-hidden bg-gradient-to-br from-[#1a1a2e] via-[#16213e] to-[#0f0f1a]">
-          {/* Background pattern overlay */}
-          <div className="absolute inset-0 opacity-20">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_hsl(var(--neon))_1px,_transparent_1px)] bg-[length:40px_40px]" />
-          </div>
+        <div className="relative w-full aspect-[2/1] md:aspect-[3/1] lg:aspect-[4/1] rounded-2xl overflow-hidden">
+          {/* Background image */}
+          <img 
+            src={communityBanner} 
+            alt="" 
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/30" />
           
           {/* Content container - bottom half */}
           <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 lg:p-12">
