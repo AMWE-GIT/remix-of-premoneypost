@@ -60,7 +60,7 @@ const ProcessStepsSection = () => {
   return (
     <section className="py-16">
       <div className="container mx-auto px-4">
-        <h2 className="text-5xl md:text-6xl lg:text-7xl font-cardo font-bold mb-8 text-left pl-4">
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-cardo font-bold mb-8 text-left">
           What's next?
         </h2>
         
@@ -82,13 +82,13 @@ const ProcessStepsSection = () => {
               >
                 <div className="p-6 h-full relative flex">
                   {/* Large number */}
-                  <span className="text-7xl md:text-8xl font-bold text-neon/40 mr-4 leading-none">
+                  <span className="text-7xl md:text-8xl font-bold text-neon mr-4 leading-none">
                     {step.number}
                   </span>
                   
                   <div className="flex flex-col justify-center">
-                    <h3 className="text-xl md:text-2xl font-medium mb-3 text-white">{step.title}</h3>
-                    <p className="text-gray-400">{step.description}</p>
+                    <h3 className="text-lg md:text-xl font-cardo font-semibold mb-2 text-white">{step.title}</h3>
+                    <p className="text-sm md:text-base font-pt-serif text-muted-foreground">{step.description}</p>
                   </div>
                   
                   {/* Separator after each item */}
@@ -98,11 +98,11 @@ const ProcessStepsSection = () => {
             ))}
             
             {/* CTA Item */}
-            <CarouselItem className="pr-4 md:basis-1/2 lg:basis-[30%]">
-              <div className="p-6 h-full flex items-center justify-center">
+            <CarouselItem className="pl-2 md:basis-1/3 lg:basis-[18%]">
+              <div className="h-full flex items-center justify-start">
                 <Button 
                   onClick={scrollToContact}
-                  className="bg-neon hover:bg-neon/80 text-neon-foreground text-xl px-10 py-8 font-semibold"
+                  className="bg-neon hover:bg-neon/80 text-neon-foreground text-lg px-8 py-6 font-semibold"
                 >
                   Let's begin →
                 </Button>

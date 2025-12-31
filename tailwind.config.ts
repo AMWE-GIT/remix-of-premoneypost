@@ -18,9 +18,10 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				'cardo': ['Cardo', 'serif'],
-			},
+		fontFamily: {
+			'cardo': ['Cardo', 'serif'],
+			'pt-serif': ['PT Serif', 'serif'],
+		},
 			colors: {
 				neon: {
 					DEFAULT: 'hsl(var(--neon))',
