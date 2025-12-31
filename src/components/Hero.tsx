@@ -22,7 +22,7 @@ const Hero = () => {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-cardo font-bold tracking-tight mb-6 max-w-4xl animate-fade-in">
           We build and partner on new ventures.
         </h1>
-        <p className="text-base md:text-lg font-pt-serif text-muted-foreground max-w-2xl mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <p className="text-base md:text-lg font-pt-serif text-white max-w-2xl mb-10 animate-fade-in" style={{ animationDelay: '0.2s' }}>
           PreMoneyPost® builds companies. We explore ideas across industries, collaborate with early-stage founders, and invest selectively.
         </p>
         <div className="flex flex-col items-center gap-4 animate-fade-in" style={{ animationDelay: '0.4s' }}>

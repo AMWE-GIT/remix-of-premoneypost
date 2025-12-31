@@ -36,8 +36,8 @@ const WhatWeDoSection = () => {
               
               {/* Content */}
               <div className="p-6 flex-grow">
-                <h3 className="text-lg md:text-xl font-cardo font-semibold mb-2 text-foreground">{card.title}</h3>
-                <p className="font-pt-serif text-sm text-muted-foreground leading-relaxed">{card.description}</p>
+                <h3 className="text-lg md:text-xl font-cardo font-semibold mb-2 text-white">{card.title}</h3>
+                <p className="font-pt-serif text-sm text-white/80 leading-relaxed">{card.description}</p>
               </div>
             </div>
           ))}

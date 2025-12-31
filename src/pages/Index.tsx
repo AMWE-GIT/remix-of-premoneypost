@@ -10,14 +10,16 @@ import Footer from "../components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen starfield text-white">
-      <Navbar />
-      <Hero />
-      <AboutSection />
-      <WhatWeDoSection />
-      <ProcessStepsSection />
-      <CommunitySection />
-      <ContactSection />
-      <Footer />
+      <div className="relative z-10">
+        <Navbar />
+        <Hero />
+        <AboutSection />
+        <WhatWeDoSection />
+        <ProcessStepsSection />
+        <CommunitySection />
+        <ContactSection />
+        <Footer />
+      </div>
     </div>
   );
 };
