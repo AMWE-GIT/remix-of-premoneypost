@@ -38,7 +38,7 @@ const CommunitySection = () => {
                   e.stopPropagation();
                   setModalOpen(true);
                 }}
-                className="px-14 py-7 text-2xl"
+                className="px-8 py-6 text-lg"
               >
                 Request an Invite
               </Button>
