@@ -22,19 +22,19 @@ const Navbar = () => {
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-[#111111]/80 backdrop-blur-md' : 'bg-transparent'}`}>
       <div className="container mx-auto px-4">
         <nav className="flex items-center justify-center h-20">
-          <div className="flex items-center gap-8">
+          <div className="flex items-center">
             <a 
               href="#community" 
-              className="w-32 text-center text-2xl font-source-sans font-semibold hover:opacity-70 transition-opacity"
+              className="w-32 text-right pr-8 text-2xl font-source-sans font-semibold hover:opacity-70 transition-opacity"
             >
               Community
             </a>
-            <a href="#" className="flex-shrink-0">
+            <a href="#" className="flex-shrink-0 mx-8">
               <img src="/lovable-uploads/1e6ceb65-666a-4a1e-9283-286a21d449e1.png" alt="PMP Logo" className="h-10" />
             </a>
             <a 
               href="#contact" 
-              className="w-32 text-center text-2xl font-source-sans font-semibold hover:opacity-70 transition-opacity"
+              className="w-32 text-left pl-8 text-2xl font-source-sans font-semibold hover:opacity-70 transition-opacity"
             >
               Contact
             </a>
