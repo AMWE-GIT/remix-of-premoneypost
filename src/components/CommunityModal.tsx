@@ -286,7 +286,7 @@ const CommunityModal = ({ open, onOpenChange }: CommunityModalProps) => {
                 type="submit" 
                 className="px-8 py-3 w-full"
               >
-                Submit Request
+                Submit
               </Button>
             </div>
           </form>

@@ -26,10 +26,10 @@ const CommunitySection = () => {
           {/* Content container - bottom half */}
           <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 lg:p-12">
             <div className="max-w-3xl">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-cardo font-bold text-white mb-4">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-cardo font-bold text-white mb-4">
                 The PreMoneyPost<sup className="text-sm align-super">®</sup> Community
               </h2>
-              <p className="font-source-sans font-semibold text-base md:text-lg lg:text-xl text-white/80 mb-8">
+              <p className="font-source-sans font-semibold text-lg md:text-xl lg:text-2xl text-white/80 mb-8">
                 A small, private network of founders and early-stage leaders sharing ideas, feedback, and trusted introductions.
               </p>
               
@@ -38,12 +38,12 @@ const CommunitySection = () => {
                   e.stopPropagation();
                   setModalOpen(true);
                 }}
-                className="px-12 py-6 text-xl"
+                className="px-14 py-7 text-2xl"
               >
                 Request an Invite
               </Button>
               
-              <p className="font-source-sans font-semibold text-white/60 text-sm mt-4">
+              <p className="font-source-sans font-semibold text-white/60 text-base mt-4">
                 Invites are limited and extended based on engagement.
               </p>
             </div>
