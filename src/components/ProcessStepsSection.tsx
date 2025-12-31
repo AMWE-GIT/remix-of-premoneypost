@@ -104,7 +104,7 @@ const ProcessStepsSection = () => {
               <div className="h-full flex items-center justify-start">
                 <Button 
                   onClick={scrollToContact}
-                  className="bg-neon hover:bg-neon/80 text-neon-foreground text-lg px-8 py-6 font-semibold"
+                  className="text-lg px-8 py-6 font-semibold"
                 >
                   Let's begin →
                 </Button>
@@ -115,18 +115,18 @@ const ProcessStepsSection = () => {
           {/* Navigation buttons */}
           <div className="flex justify-center mt-8 gap-2 mx-auto">
             <CarouselPrevious 
-              className={`relative static text-neon-foreground ${
+              className={`relative static translate-y-0 ${
                 canScrollPrev 
-                  ? "bg-neon hover:bg-neon/80" 
-                  : "bg-gray-500 cursor-not-allowed"
+                  ? "" 
+                  : "opacity-50 cursor-not-allowed"
               }`} 
               disabled={!canScrollPrev}
             />
             <CarouselNext 
-              className={`relative static text-neon-foreground ${
+              className={`relative static translate-y-0 ${
                 canScrollNext 
-                  ? "bg-neon hover:bg-neon/80" 
-                  : "bg-gray-500 cursor-not-allowed"
+                  ? "" 
+                  : "opacity-50 cursor-not-allowed"
               }`} 
               disabled={!canScrollNext}
             />

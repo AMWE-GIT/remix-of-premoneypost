@@ -10,15 +10,18 @@ const CommunitySection = () => {
     <section id="community" className="py-24 bg-black">
       <div className="container mx-auto px-4">
         {/* Full-width responsive box */}
-        <div className="relative w-full aspect-[4/3] md:aspect-[2/1] lg:aspect-[5/2] rounded-2xl overflow-hidden">
+        <div 
+          className="relative w-full aspect-[4/3] md:aspect-[2/1] lg:aspect-[5/2] rounded-2xl overflow-hidden cursor-pointer group"
+          onClick={() => setModalOpen(true)}
+        >
           {/* Background image */}
           <img 
             src={communityBanner} 
             alt="" 
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
           />
           {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-black/30 transition-colors duration-300 group-hover:bg-black/40" />
           
           {/* Content container - bottom half */}
           <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 lg:p-12">
@@ -31,7 +34,10 @@ const CommunitySection = () => {
               </p>
               
               <Button 
-                onClick={() => setModalOpen(true)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setModalOpen(true);
+                }}
                 className="px-8 py-4 text-base"
               >
                 Request an Invite
