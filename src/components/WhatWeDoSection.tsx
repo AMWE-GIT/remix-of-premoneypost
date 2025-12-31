@@ -36,13 +36,14 @@ const WhatWeDoSection = () => {
               key={index}
               className="flex flex-col rounded-2xl overflow-hidden border border-white/10 bg-[#050505] hover:border-white/20 transition-all duration-300"
             >
-              {/* Image with 16:9 aspect ratio */}
-              <div className="aspect-video w-full overflow-hidden">
+              {/* Image with 16:9 aspect ratio and neon green tint */}
+              <div className="aspect-video w-full overflow-hidden relative">
                 <img 
                   src={card.image} 
                   alt={card.title}
                   className="w-full h-full object-cover"
                 />
+                <div className="absolute inset-0 bg-neon/30 mix-blend-multiply" />
               </div>
               
               {/* Content */}
