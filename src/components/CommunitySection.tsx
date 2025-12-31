@@ -32,7 +32,7 @@ const CommunitySection = () => {
               
               <Button 
                 onClick={() => setModalOpen(true)}
-                className="bg-neon hover:bg-neon/80 hover:shadow-lg hover:shadow-neon/20 text-neon-foreground font-medium px-6 py-3 rounded-xl transition-all duration-300"
+                className="px-6 py-3"
               >
                 Request an invite
               </Button>

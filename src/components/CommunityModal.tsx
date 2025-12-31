@@ -284,7 +284,7 @@ const CommunityModal = ({ open, onOpenChange }: CommunityModalProps) => {
             <div className="text-center pt-2">
               <Button 
                 type="submit" 
-                className="bg-neon hover:bg-neon/80 text-neon-foreground px-8 py-3 w-full"
+                className="px-8 py-3 w-full"
               >
                 Submit Request
               </Button>
