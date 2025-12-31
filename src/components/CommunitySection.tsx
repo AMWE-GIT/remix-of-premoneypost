@@ -18,7 +18,7 @@ const CommunitySection = () => {
           {/* Content container - bottom half */}
           <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 lg:p-12">
             <div className="max-w-2xl">
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-3">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-cardo font-bold text-white mb-3">
                 The PreMoneyPost® Community
               </h2>
               <p className="text-gray-300 text-sm md:text-base lg:text-lg mb-6">
@@ -27,7 +27,7 @@ const CommunitySection = () => {
               
               <Button 
                 onClick={() => setModalOpen(true)}
-                className="bg-[#10B981] hover:bg-[#059669] hover:shadow-lg hover:shadow-[#10B981]/20 text-white font-medium px-6 py-3 rounded-xl transition-all duration-300"
+                className="bg-neon hover:bg-neon/80 hover:shadow-lg hover:shadow-neon/20 text-neon-foreground font-medium px-6 py-3 rounded-xl transition-all duration-300"
               >
                 Request an invite
               </Button>
