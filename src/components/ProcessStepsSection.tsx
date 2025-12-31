@@ -93,8 +93,6 @@ const ProcessStepsSection = () => {
                     <p className="text-base md:text-lg font-source-sans font-semibold text-white/80">{step.description}</p>
                   </div>
                   
-                  {/* Separator after each item */}
-                  <Separator orientation="vertical" className="absolute right-0 top-6 bottom-6 h-auto bg-white/20" />
                 </div>
               </CarouselItem>
             ))}
@@ -104,9 +102,9 @@ const ProcessStepsSection = () => {
               <div className="h-full flex items-center justify-start">
                 <Button 
                   onClick={scrollToContact}
-                  className="text-lg px-8 py-6 font-semibold"
+                  className="text-xl px-10 py-7 font-semibold"
                 >
-                  Let's begin →
+                  Let's begin
                 </Button>
               </div>
             </CarouselItem>
