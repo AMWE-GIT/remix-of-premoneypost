@@ -175,9 +175,9 @@ const CommunityModal = ({ open, onOpenChange }: CommunityModalProps) => {
         {formSubmitted ? (
           <div className="text-center py-6">
             <p className="text-gray-300">
-              We've received your request.
+              Thank you for your interest.
               <br />
-              We'll be in touch soon.
+              We will get back to you within 3 working days.
             </p>
           </div>
         ) : (
