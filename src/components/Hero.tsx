@@ -31,17 +31,11 @@ const Hero = () => {
           We build and partner on new ventures.
         </h1>
         <h2
-          className="mt-6 animate-fade-in font-cardo text-2xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] md:text-3xl lg:text-4xl"
+          className="mb-10 mt-6 max-w-4xl animate-fade-in font-cardo text-2xl font-bold text-white drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] md:text-3xl lg:text-4xl"
           style={{ animationDelay: "0.15s" }}
         >
-          PreMoneyPost<sup className="text-sm align-super">®</sup> builds companies.
+          PreMoneyPost<sup className="text-sm align-super">®</sup> builds companies, explores ideas across industries, and invests early alongside founders.
         </h2>
-        <h3
-          className="mb-10 mt-6 max-w-4xl animate-fade-in font-source-sans text-sm font-semibold text-white/90 drop-shadow-[0_2px_12px_rgba(0,0,0,0.95)] md:text-base lg:text-lg"
-          style={{ animationDelay: "0.3s" }}
-        >
-          We explore ideas across industries, collaborate with early-stage founders, and invest selectively.
-        </h3>
         <div className="flex animate-fade-in flex-col items-center gap-4" style={{ animationDelay: "0.4s" }}>
           <Button onClick={scrollToContact} className="px-8 py-6 text-lg">
             Start a Conversation
@@ -50,7 +44,7 @@ const Hero = () => {
             onClick={scrollToCommunity}
             className="font-source-sans font-semibold text-white/80 underline underline-offset-4 transition-colors hover:text-white"
           >
-            Learn about the community
+            Join the PreMoneyPost Community
           </button>
         </div>
       </div>
