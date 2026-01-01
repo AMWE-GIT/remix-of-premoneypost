@@ -44,7 +44,7 @@ const Hero = () => {
             onClick={scrollToCommunity}
             className="font-source-sans font-semibold text-white/80 underline underline-offset-4 transition-colors hover:text-white"
           >
-            Join the PreMoneyPost Community
+            Join the PreMoneyPost<sup className="text-[0.6em] align-super">®</sup> Community
           </button>
         </div>
       </div>
