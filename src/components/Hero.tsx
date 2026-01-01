@@ -42,9 +42,9 @@ const Hero = () => {
           </Button>
           <button
             onClick={scrollToCommunity}
-            className="font-source-sans font-semibold text-white/80 transition-colors hover:text-white"
+            className="font-source-sans font-semibold text-white/80 underline underline-offset-4 transition-colors hover:text-white"
           >
-            <span className="underline underline-offset-4">Join the PreMoneyPost</span><sup className="text-[0.6em]">®</sup><span className="underline underline-offset-4"> Community</span>
+            Join the Community
           </button>
         </div>
       </div>
