@@ -7,12 +7,12 @@ const WhatWeDoSection = () => {
   const cards = [
     {
       title: "Build",
-      description: "We build our own companies. From early ideas to launched products, we create ventures we intend to own and grow.",
+      description: "Launch companies from idea to operation, shaping ventures at every stage.",
       image: cardBuild
     },
     {
       title: "Explore",
-      description: "We explore ideas across industries. We spend time understanding problems, markets, and opportunities before committing to what to build or back.",
+      description: "We explore ideas across industries, studying real problems, markets, and customer behavior to decide which ideas to build into companies.",
       image: cardExplore
     },
     {
@@ -22,7 +22,7 @@ const WhatWeDoSection = () => {
     },
     {
       title: "Invest",
-      description: "We invest selectively. In some cases, we commit capital or resources to ideas and companies with clear potential.",
+      description: "Provide early-stage capital and partner with founders on ventures across MENA and beyond.",
       image: cardInvest
     }
   ];
