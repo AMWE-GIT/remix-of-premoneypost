@@ -21,7 +21,7 @@ const CommunitySection = () => {
             className="absolute inset-0 w-full h-full object-cover"
           />
           {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/30" />
+          <div className="absolute inset-0 bg-black/50" />
           
           {/* Content container - bottom half */}
           <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 lg:p-12">
