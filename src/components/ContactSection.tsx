@@ -260,7 +260,7 @@ const ContactSection = () => {
                 onBlur={handleBlur}
                 rows={5}
                 className="w-full px-4 py-3 bg-secondary text-black rounded-lg focus:outline-none focus:ring-2 focus:ring-white text-sm font-source-sans"
-                placeholder="Tell us about your project or inquiry..."
+                placeholder="Tell us what you're building and where you are today. We'll get back to you within 3 working days."
               ></textarea>
               {/* No error message for the message field */}
             </div>

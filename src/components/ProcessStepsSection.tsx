@@ -52,8 +52,13 @@ const ProcessStepsSection = () => {
     },
     {
       number: "3",
-      title: "Decide what makes sense",
-      description: "Collaboration, co-building, or selective investment happens only when there's clear alignment."
+      title: "Explore working together",
+      description: "Collaboration, co-building or selective investment. We explore ways to work together."
+    },
+    {
+      number: "4",
+      title: "Community",
+      description: "Be part of a community of like-minded founders supporting each other on the journey. Whether we work together now or later."
     }
   ];
 

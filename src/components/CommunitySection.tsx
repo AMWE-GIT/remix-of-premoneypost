@@ -30,7 +30,7 @@ const CommunitySection = () => {
                 The PreMoneyPost<sup className="text-sm align-super">®</sup> Community
               </h2>
               <p className="font-source-sans font-semibold text-lg md:text-xl lg:text-2xl text-white/80 mb-8">
-                A small, private network of founders and early-stage leaders sharing ideas, feedback, and trusted introductions.
+                A small, private group of founders and early-stage operators sharing ideas, experiences, and support as they grow. We host occasional events, gatherings, and sessions to help the community learn from each other.
               </p>
               
               <Button 
@@ -42,10 +42,6 @@ const CommunitySection = () => {
               >
                 Request an Invite
               </Button>
-              
-              <p className="font-source-sans font-semibold text-white/60 text-base mt-4">
-                Invites are limited and extended based on engagement.
-              </p>
             </div>
           </div>
         </div>
