@@ -147,7 +147,7 @@ const ContactSection = () => {
             
             <div className="text-center">
               <p className="text-xl font-source-sans font-semibold">
-                <span className="text-neon">Thank you</span> for your interest.
+                <span className="text-neon">Thank you</span> for reaching out.
                 <br />
                 We will get back to you within 3 working days.
               </p>
