@@ -18,7 +18,7 @@ const CommunitySection = () => {
           <img 
             src={communityBanner} 
             alt="" 
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-contain"
           />
           {/* Dark overlay for text readability */}
           <div className="absolute inset-0 bg-black/40" />
