@@ -11,14 +11,14 @@ const CommunitySection = () => {
       <div className="container mx-auto px-4">
         {/* Full-width responsive box */}
         <div 
-          className="relative w-full aspect-[4/3] md:aspect-[2/1] lg:aspect-[5/2] rounded-2xl overflow-hidden cursor-pointer"
+          className="relative w-full aspect-[16/9] md:aspect-[21/9] lg:aspect-[3/1] rounded-2xl overflow-hidden cursor-pointer"
           onClick={() => setModalOpen(true)}
         >
           {/* Background image */}
           <img 
             src={communityBanner} 
             alt="" 
-            className="absolute inset-0 w-full h-full object-contain"
+            className="absolute inset-0 w-full h-full object-cover"
           />
           {/* Dark overlay for text readability */}
           <div className="absolute inset-0 bg-black/40" />
