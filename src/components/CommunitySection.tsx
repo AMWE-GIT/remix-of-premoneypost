@@ -11,20 +11,30 @@ const CommunitySection = () => {
       <div className="container mx-auto px-4">
         {/* Full-width responsive box */}
         <div 
-          className="relative w-full aspect-[16/9] md:aspect-[21/9] lg:aspect-[3/1] rounded-2xl overflow-hidden cursor-pointer"
+          className="relative w-full aspect-[16/9] md:aspect-[21/9] lg:aspect-[3/1] rounded-2xl overflow-hidden cursor-pointer bg-black"
           onClick={() => setModalOpen(true)}
         >
-          {/* Background image */}
+          {/* Background fill layer - blurred to fill edges */}
           <img 
             src={communityBanner} 
             alt="" 
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover scale-110 blur-md brightness-50 pointer-events-none"
+            loading="lazy"
+            decoding="async"
           />
-          {/* Dark overlay for text readability */}
-          <div className="absolute inset-0 bg-black/40" />
+          {/* Foreground image - full image, never cropped */}
+          <img 
+            src={communityBanner} 
+            alt="PreMoneyPost Community" 
+            className="absolute inset-0 w-full h-full object-contain z-10 pointer-events-none"
+            loading="lazy"
+            decoding="async"
+          />
+          {/* Gradient overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10 z-20" />
           
           {/* Content container - bottom half */}
-          <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 lg:p-12">
+          <div className="absolute inset-0 flex flex-col justify-end p-6 md:p-10 lg:p-12 z-30">
             <div className="max-w-3xl">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-cardo font-bold text-white mb-4 md:whitespace-nowrap">
                 The PreMoneyPost<sup className="text-sm align-super">®</sup> Community
